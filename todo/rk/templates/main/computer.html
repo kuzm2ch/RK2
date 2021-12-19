@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{data.computer.name}}{% endblock %}
+{% block content %}
+
+    <div class="features">
+        <h3>Программы компьютера {{data.computer.name}}, {{data.computer.cost}} руб:</h3>
+        {% for program in data.programs %}
+         <div>{{program.name}}, {{program.size}} Mb.</div>
+        {% endfor %}
+
+    </div>
+{% endblock %}
